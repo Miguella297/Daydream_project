@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://m6s8g55diiqx"]
+
+[ext_resource type="Texture2D" uid="uid://og1mj0dn6kh5" path="res://daydream project background.png" id="1_28flt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_48xlc"]
+texture = ExtResource("1_28flt")
+modulate_color = Color(0.299547, 0.299547, 0.299547, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erv1k"]
+bg_color = Color(0.812608, 0.94684, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 3.41)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_48xlc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 294.0
+offset_top = 267.0
+offset_right = 853.0
+offset_bottom = 424.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 47
+theme_override_styles/normal = SubResource("StyleBoxFlat_erv1k")
+text = "Play game!!"
