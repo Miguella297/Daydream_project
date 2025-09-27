@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bq8glfcxxsfgu"]
+
+[ext_resource type="Texture2D" uid="uid://bgmgscghbhi7g" path="res://Scenes/Idle.png" id="1_g5h82"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_am1lw"]
+texture = ExtResource("1_g5h82")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jne6m"]
+sources/0 = SubResource("TileSetAtlasSource_am1lw")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6r6c"]
+size = Vector2(15.5, 9)
+
+[node name="TileMap2" type="TileMap"]
+texture_filter = 1
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_jne6m")
+format = 2
+layer_0/tile_data = PackedInt32Array(262179, 0, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(567.75, 75.5)
+shape = SubResource("RectangleShape2D_q6r6c")

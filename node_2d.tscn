@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c67sqfj5b7rx1"]
+[gd_scene load_steps=11 format=3 uid="uid://c67sqfj5b7rx1"]
 
 [ext_resource type="Texture2D" uid="uid://cajgas3pu8qgx" path="res://Blue.png" id="1_0e48y"]
 [ext_resource type="Texture2D" uid="uid://dhws8qotqdhah" path="res://Terrain (16x16).png" id="2_epypp"]
 [ext_resource type="PackedScene" uid="uid://c2gdl1wh7nvhk" path="res://Scenes/scenes/scenes/scenes/main_character.tscn" id="3_epypp"]
 [ext_resource type="AudioStream" uid="uid://df3lhgoh0s3fi" path="res://Dodgeball!!.mp3" id="4_0hol4"]
+[ext_resource type="PackedScene" uid="uid://bq8glfcxxsfgu" path="res://Spike scene/spikes scene/tile_map_2.tscn" id="5_q6r6c"]
+[ext_resource type="Script" uid="uid://c2jyttcjq0bwl" path="res://skibidispikes.gd" id="6_kdubu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hol4"]
 texture = ExtResource("2_epypp")
@@ -310,8 +312,10 @@ func _ready():
 	add_child(label)
 	label.text = \"End\"
 	label.position = Vector2(1100, 100)  # Position on screen
-	add_child(label)
 "
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6r6c"]
+size = Vector2(75, 19)
 
 [node name="Node2D" type="Node2D"]
 
@@ -339,3 +343,12 @@ script = SubResource("GDScript_epypp")
 stream = ExtResource("4_0hol4")
 volume_db = 24.0
 autoplay = true
+
+[node name="TileMap2" parent="." groups=["spikes"] instance=ExtResource("5_q6r6c")]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("6_kdubu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1062, 149)
+shape = SubResource("RectangleShape2D_q6r6c")
