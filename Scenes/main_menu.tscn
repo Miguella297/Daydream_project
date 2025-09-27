@@ -94,4 +94,14 @@ position = Vector2(173, 371)
 scale = Vector2(5.375, 5.75)
 texture = ExtResource("3_ce3w2")
 
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 459.0
+offset_right = 791.0
+offset_bottom = 505.0
+theme_override_colors/font_color = Color(0, 0.572894, 0.912717, 1)
+theme_override_font_sizes/font_size = 31
+text = "Double space to double jump"
+
 [connection signal="pressed" from="Button" to="." method="_on_start_pressed"]

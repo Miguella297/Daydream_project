@@ -187,7 +187,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jumping",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -243,6 +243,7 @@ position = Vector2(30.6049, 31.5814)
 rotation = -0.0224404
 scale = Vector2(2.98139, 2.91185)
 sprite_frames = SubResource("SpriteFrames_2m4o6")
+animation = &"running"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
