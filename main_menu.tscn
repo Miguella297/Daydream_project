@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://m6s8g55diiqx"]
 
-[ext_resource type="Texture2D" uid="uid://og1mj0dn6kh5" path="res://daydream project background.png" id="1_28flt"]
-[ext_resource type="FontFile" uid="uid://c5y1rn0hg2oof" path="res://Scenes/Fantasm and Secrets.ttf" id="2_1ehe0"]
-[ext_resource type="Texture2D" uid="uid://bmh1my8lcf1r7" path="res://Jump (32x32).png" id="3_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://og1mj0dn6kh5" path="res://daydream project background.png" id="1_fu7sn"]
+[ext_resource type="FontFile" uid="uid://c5y1rn0hg2oof" path="res://Scenes/Fantasm and Secrets.ttf" id="2_jix8l"]
+[ext_resource type="Texture2D" uid="uid://bmh1my8lcf1r7" path="res://Jump (32x32).png" id="3_glbon"]
 
 [sub_resource type="GDScript" id="GDScript_1ehe0"]
 script/source = "extends Control
@@ -16,7 +16,7 @@ func _on_start_pressed() -> void:
 "
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_48xlc"]
-texture = ExtResource("1_28flt")
+texture = ExtResource("1_fu7sn")
 modulate_color = Color(0.299547, 0.299547, 0.299547, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ehe0"]
@@ -69,7 +69,7 @@ offset_left = 241.0
 offset_top = 43.0
 offset_right = 923.0
 offset_bottom = 234.0
-theme_override_fonts/font = ExtResource("2_1ehe0")
+theme_override_fonts/font = ExtResource("2_jix8l")
 theme_override_font_sizes/font_size = 80
 text = "Jumper@Dropper ;D"
 horizontal_alignment = 1
@@ -79,7 +79,7 @@ vertical_alignment = 1
 texture_filter = 1
 position = Vector2(173, 371)
 scale = Vector2(5.375, 5.75)
-texture = ExtResource("3_ce3w2")
+texture = ExtResource("3_glbon")
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0

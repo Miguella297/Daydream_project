@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dk0ppr7qtewl5"]
+[gd_scene load_steps=9 format=3 uid="uid://dk0ppr7qtewl5"]
 
 [ext_resource type="Texture2D" uid="uid://bxgccw6ykpra2" path="res://Yellow.png" id="1_ecusl"]
 [ext_resource type="Texture2D" uid="uid://dhws8qotqdhah" path="res://Terrain (16x16).png" id="2_4xn0f"]
 [ext_resource type="AudioStream" uid="uid://df3lhgoh0s3fi" path="res://Dodgeball!!.mp3" id="3_4xn0f"]
 [ext_resource type="PackedScene" uid="uid://c2gdl1wh7nvhk" path="res://Scenes/scenes/scenes/scenes/main_character.tscn" id="4_8bp46"]
+[ext_resource type="Script" uid="uid://d31duud2pok5g" path="res://gooningscript.gd" id="5_dttbi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8bp46"]
 texture = ExtResource("2_4xn0f")
@@ -300,6 +301,9 @@ texture = ExtResource("2_4xn0f")
 physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_8bp46")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7ixy"]
+size = Vector2(62.5, 48.5)
+
 [node name="Node2D part 2" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -322,3 +326,19 @@ autoplay = true
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_8bp46")]
 position = Vector2(28, 470)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 35.0
+offset_top = 30.0
+offset_right = 108.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "End"
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("5_dttbi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(95.75, 94.25)
+shape = SubResource("RectangleShape2D_w7ixy")
